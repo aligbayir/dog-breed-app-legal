@@ -4,38 +4,77 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Gizlilik Politikası - Dog Breed App</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color:#111; line-height:1.6; padding:24px; }
+    main { max-width:900px; margin:24px auto; }
+    h1,h2 { color:#0b5; }
+    footer { color:#666; font-size:0.9em; margin-top:36px; }
+    pre { background:#f7f7f7; padding:12px; overflow:auto; }
+  </style>
 </head>
 <body>
-  <main style="font-family:Arial,Helvetica,sans-serif;max-width:800px;margin:40px auto;line-height:1.6;">
+  <main>
     <h1>Gizlilik Politikası</h1>
-    <p>Son güncelleme: <strong>2025-12-06</strong></p>
+    <p><strong>Son güncelleme:</strong> <span id="updated">2025-12-06</span></p>
 
-    <h2>1. Genel</h2>
-    <p>Bu uygulama (Dog Breed App) yalnızca kullanıcıların yüklediği fotoğrafları analiz ederek köpek cinsini tahmin eden bir yapay zeka modeli kullanır. Aşağıda hangi verilerin işlendiği, nasıl işlendiği ve kullanıcı haklarınız açıklanmıştır.</p>
+    <p>Bu Gizlilik Politikası, <strong>Dog Breed App</strong> (bundan sonra "uygulama") tarafından toplanan veri türlerini, verilerin nasıl işlendiğini, saklandığını ve kullanıcıların bu veriler üzerindeki haklarını açıklar.</p>
 
-    <h2>2. Toplanan Veriler</h2>
+    <h2>1. Hangi verileri topluyoruz?</h2>
     <ul>
-      <li><strong>Fotoğraflar:</strong> Kullanıcıların yüklediği veya çektiği köpek fotoğrafları analiz için geçici olarak işlenir.</li>
-      <li><strong>Sunucu logları/istatistikler:</strong> Hata ve performans izleme için anonimleştirilmiş telemetri toplanabilir.</li>
+      <li><strong>Kullanıcı tarafından yüklenen fotoğraflar:</strong> Uygulama kullanıcıların yüklediği hayvan fotoğraflarını alır. Bu görseller uygulama tarafından <em>base64</em> formatında Firebase üzerinde saklanabilir.</li>
+      <li><strong>Analiz verileri:</strong> Yapay zeka modeli tarafından üretilen cins tahminleri ve benzerlik yüzdeleri.</li>
+      <li><strong>Anonymize telemetri / hata raporları:</strong> Performans ve hata takibi için sınırlı ve anonimleştirilmiş telemetri toplanabilir (eğer aktifleştirilmişse).</li>
     </ul>
 
-    <h2>3. Fotoğrafların İşlenme Şekli</h2>
-    <p>Fotoğraflar uygulama tarafından yerelde (cihazda) veya seçili bir analiz servisine gönderilerek işlenir. Uygulamanın ayarlarında “Fotoğrafları kaydet” seçeneği yoksa fotoğraflar kalıcı olarak saklanmaz.</p>
+    <h2>2. Verilerin kullanım amacı</h2>
+    <p>Toplanan fotoğraflar ve ilgili veriler şu amaçlar için kullanılabilir:</p>
+    <ul>
+      <li>Köpek cinsi tahmini yapmak.</li>
+      <li>Uygulama performansını ve doğruluğunu arttırmak için yapay zeka modelinin geliştirilmesi (model eğitimi ve değerlendirme).</li>
+      <li>Uygulama içinde kullanıcıya gösterilecek ırk bilgilerini (Wikipedia gibi üçüncü taraf kaynaklardan çekilen içeriklerle) eşleştirmek.</li>
+    </ul>
 
-    <h2>4. Paylaşılan Bilgiler</h2>
-    <p>AI yalnızca cins tahmini ve benzerlik yüzdeleri döner. Irk açıklamaları/ayrıntılar uygulama tarafından WordPress API aracılığıyla çekilir; bu API çağrıları sırasında sadece cins kimliği gönderilir, kişisel veri gönderilmez.</p>
+    <h2>3. Verileri nasıl saklıyoruz?</h2>
+    <p>Görseller, uygulamanın yapılandırmasına bağlı olarak Firebase Storage veya Firebase Realtime Database / Firestore üzerinde <em>base64</em> formatında saklanabilir. Saklama süresi ve politika uygulama ayarlarına göre değişir; isteğe bağlı olarak veriler süre sonunda veya kullanıcı talebiyle silinebilir.</p>
 
-    <h2>5. Verilerin Saklanması ve Silinmesi</h2>
-    <p>Fotoğraflar kalıcı olarak saklanmıyorsa (uygulama ayarına bağlı), analiz sonrasında silinir. Eğer uygulama sunucuda geçici saklama yapıyorsa bu saklama süresi burada belirtilecektir.</p>
+    <h2>4. Yapay zeka eğitimi için veri kullanımı</h2>
+    <p>Kullanıcılar uygulamaya görsel yükleyerek, ilgili görselin <strong>uygulamanın yapay zeka modelini geliştirmek amacıyla</strong> kullanılmasına izin vermiş sayılır. Bu kullanım şunları kapsayabilir:</p>
+    <ul>
+      <li>Modelin yeniden eğitilmesi veya ince ayarı (fine-tuning) için örnek veri setine dahil edilmesi.</li>
+      <li>Model doğruluğunu ölçmek ve iyileştirmek için anonimleştirilmiş veri analizleri yapılması.</li>
+    </ul>
 
-    <h2>6. Kullanıcı Hakları</h2>
-    <p>Veri işleme ile ilgili sorularınız veya verilerinizin silinmesini talep etmek için: <a href="mailto:youremail@example.com">a.bayrgorkem@gmail.com</a></p>
+    <h2>5. Üçüncü taraf hizmet sağlayıcılar</h2>
+    <p>Uygulama aşağıdaki üçüncü taraf servisleri kullanabilir:</p>
+    <ul>
+      <li><strong>Firebase</strong> — Depolama, kimlik doğrulama, analiz vb. hizmetler.</li>
+      <li><strong>Wikipedia API</strong> — Köpek ırklarına ait açıklamalar ve bilgileri göstermek için. Wikipedia içeriği Creative Commons lisansı kapsamında sunulur; bu içeriğin lisans koşulları Wikipedia tarafından belirlenir.</li>
+    </ul>
 
-    <h2>7. İletişim</h2>
-    <p>Herhangi bir gizlilik sorusu için: <br/>a.bayrgorkem@gmail.com</p>
+    <h2>6. Veri paylaşımı</h2>
+    <p>Kullanıcı verileri üçüncü şahıslarla satılmaz. Ancak veri aşağıdaki durumlarda paylaşılabilir:</p>
+    <ul>
+      <li>Hukuki zorunluluk halinde yetkili makam talepleri doğrultusunda.</li>
+      <li>Firebase veya benzeri hizmet sağlayıcılarla (servislerin çalışması için gerekli olan teknik paylaşım).</li>
+    </ul>
 
-    <footer style="margin-top:30px;font-size:0.9em;color:#666;">
-      <p>Bu sayfa, uygulamanızın gizlilik politikasının genel bir örneğidir. Hukuki olarak bağlayıcı olması için bir hukuk danışmanına başvurmanızı öneririz.</p>
+    <h2>7. Verilerin silinmesi ve erişim talepleri</h2>
+    <p>Kullanıcı dilediği zaman yüklemiş olduğu görsellerin silinmesini talep edebilir veya saklanan verileri görmek isteyebilir. Silme veya veri erişim talepleri için lütfen şu e-posta adresiyle iletişime geçin:</p>
+    <p><a href="mailto:a.bayrgorkem@gmail.com">a.bayrgorkem@gmail.com</a></p>
+    <p>Talepler makul bir süre içinde değerlendirilecektir. (Hukuki gereklilikler veya teknik sınırlamalar dolayısıyla bazı verilerin tamamen silinmesi gecikebilir.)</p>
+
+    <h2>8. Çocukların gizliliği</h2>
+    <p>Uygulama 13 yaş altı çocuklara yönelik değildir. 13 yaşın altındaki bir çocuğa ait kişisel veri toplandığından şüpheleniyorsanız lütfen bizimle iletişime geçin; gerekli düzeltmeleri yapacağız.</p>
+
+    <h2>9. Güvenlik</h2>
+    <p>Verilerin güvenliğini sağlamak için endüstri standartı önlemler uygulanır (şifreleme, yetkilendirme vb.). Ancak hiçbir yöntem %100 güvenli değildir; veri güvenliğini sağlamak için sürekli güncellemeler yapılmaktadır.</p>
+
+    <h2>10. Politikadaki değişiklikler</h2>
+    <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler olduğunda uygulama içi bildirim veya e-posta ile bilgilendirme yapılacaktır. Lütfen sayfanın en üstündeki "Son güncelleme" tarihini kontrol edin.</p>
+
+    <footer>
+      <p>Bu belge bilgilendirme amaçlıdır; hukuki bağlayıcılık adına profesyonel hukuki danışmanlık almanızı öneririz.</p>
+      <p>İletişim: <a href="mailto:a.bayrgorkem@gmail.com">a.bayrgorkem@gmail.com</a></p>
     </footer>
   </main>
 </body>

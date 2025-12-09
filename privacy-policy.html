@@ -1,81 +1,353 @@
-<!doctype html>
-<html lang="tr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Gizlilik Politikası - Dog Breed App</title>
-  <style>
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color:#111; line-height:1.6; padding:24px; }
-    main { max-width:900px; margin:24px auto; }
-    h1,h2 { color:#0b5; }
-    footer { color:#666; font-size:0.9em; margin-top:36px; }
-    pre { background:#f7f7f7; padding:12px; overflow:auto; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Dog Breed Scanner - Learn how we protect your data and privacy">
+    <title>Privacy Policy - Dog Breed Scanner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .app-name {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .last-updated {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px 16px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #92400e;
+        }
+
+        h2 {
+            color: #f97316;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #374151;
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4b5563;
+            font-size: 1rem;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #4b5563;
+        }
+
+        .important {
+            background: #fee2e2;
+            border-left: 4px solid #ef4444;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .important strong {
+            color: #991b1b;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .contact-box {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .contact-box a {
+            color: #f97316;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #f9fafb;
+            padding: 20px 30px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.9rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <h1>Gizlilik Politikası</h1>
-    <p><strong>Son güncelleme:</strong> <span id="updated">2025-12-06</span></p>
+    <div class="container">
+        <div class="header">
+            <h1>Privacy Policy</h1>
+            <div class="app-name">Dog Breed Scanner</div>
+        </div>
 
-    <p>Bu Gizlilik Politikası, <strong>Dog Breed App</strong> (bundan sonra "uygulama") tarafından toplanan veri türlerini, verilerin nasıl işlendiğini, saklandığını ve kullanıcıların bu veriler üzerindeki haklarını açıklar.</p>
+        <div class="content">
+            <div class="last-updated">
+                <strong>Last Updated:</strong> December 9, 2025
+            </div>
 
-    <h2>1. Hangi verileri topluyoruz?</h2>
-    <ul>
-      <li><strong>Kullanıcı tarafından yüklenen fotoğraflar:</strong> Uygulama kullanıcıların yüklediği hayvan fotoğraflarını alır. Bu görseller uygulama tarafından <em>base64</em> formatında Firebase üzerinde saklanabilir.</li>
-      <li><strong>Analiz verileri:</strong> Yapay zeka modeli tarafından üretilen cins tahminleri ve benzerlik yüzdeleri.</li>
-      <li><strong>Anonymize telemetri / hata raporları:</strong> Performans ve hata takibi için sınırlı ve anonimleştirilmiş telemetri toplanabilir (eğer aktifleştirilmişse).</li>
-    </ul>
+            <div class="section">
+                <p>
+                    This Privacy Policy describes how Dog Breed Scanner ("we", "our", or "us") collects, uses, and protects your information when you use our mobile application. We are committed to protecting your privacy and ensuring you have a positive experience while using our service.
+                </p>
+            </div>
 
-    <h2>2. Verilerin kullanım amacı</h2>
-    <p>Toplanan fotoğraflar ve ilgili veriler şu amaçlar için kullanılabilir:</p>
-    <ul>
-      <li>Köpek cinsi tahmini yapmak.</li>
-      <li>Uygulama performansını ve doğruluğunu arttırmak için yapay zeka modelinin geliştirilmesi (model eğitimi ve değerlendirme).</li>
-      <li>Uygulama içinde kullanıcıya gösterilecek ırk bilgilerini (Wikipedia gibi üçüncü taraf kaynaklardan çekilen içeriklerle) eşleştirmek.</li>
-    </ul>
+            <div class="section">
+                <h2>1. Information We Collect</h2>
+                
+                <h3>1.1 Camera and Photo Access</h3>
+                <p>
+                    Our application requires access to your device's camera and photo gallery to function properly. This access is used solely for the purpose of analyzing dog images to identify their breeds.
+                </p>
+                <ul>
+                    <li><strong>Camera:</strong> Used to take new photos of dogs for breed identification</li>
+                    <li><strong>Photo Gallery:</strong> Used to select existing photos from your device for analysis</li>
+                </ul>
 
-    <h2>3. Verileri nasıl saklıyoruz?</h2>
-    <p>Görseller, uygulamanın yapılandırmasına bağlı olarak Firebase Storage veya Firebase Realtime Database / Firestore üzerinde <em>base64</em> formatında saklanabilir. Saklama süresi ve politika uygulama ayarlarına göre değişir; isteğe bağlı olarak veriler süre sonunda veya kullanıcı talebiyle silinebilir.</p>
+                <div class="important">
+                    <p><strong>Important:</strong> We do NOT upload your images to any remote server for storage or data collection purposes. All image analysis is performed locally on your device using an on-device AI model. Your photos never leave your device and are not stored by us.</p>
+                </div>
 
-    <h2>4. Yapay zeka eğitimi için veri kullanımı</h2>
-    <p>Kullanıcılar uygulamaya görsel yükleyerek, ilgili görselin <strong>uygulamanın yapay zeka modelini geliştirmek amacıyla</strong> kullanılmasına izin vermiş sayılır. Bu kullanım şunları kapsayabilir:</p>
-    <ul>
-      <li>Modelin yeniden eğitilmesi veya ince ayarı (fine-tuning) için örnek veri setine dahil edilmesi.</li>
-      <li>Model doğruluğunu ölçmek ve iyileştirmek için anonimleştirilmiş veri analizleri yapılması.</li>
-    </ul>
+                <h3>1.2 Usage Data</h3>
+                <p>
+                    We may collect anonymous, non-identifiable usage data to improve the application's performance and user experience. This may include:
+                </p>
+                <ul>
+                    <li>App features used (e.g., camera vs. gallery selection)</li>
+                    <li>App crashes and error logs</li>
+                    <li>Device type and operating system version</li>
+                    <li>App version and language settings</li>
+                </ul>
 
-    <h2>5. Üçüncü taraf hizmet sağlayıcılar</h2>
-    <p>Uygulama aşağıdaki üçüncü taraf servisleri kullanabilir:</p>
-    <ul>
-      <li><strong>Firebase</strong> — Depolama, kimlik doğrulama, analiz vb. hizmetler.</li>
-      <li><strong>Wikipedia API</strong> — Köpek ırklarına ait açıklamalar ve bilgileri göstermek için. Wikipedia içeriği Creative Commons lisansı kapsamında sunulur; bu içeriğin lisans koşulları Wikipedia tarafından belirlenir.</li>
-    </ul>
+                <h3>1.3 Advertising Data</h3>
+                <p>
+                    Our app displays advertisements through Google AdMob. AdMob may collect certain information for advertising purposes, including:
+                </p>
+                <ul>
+                    <li>Device advertising ID</li>
+                    <li>IP address</li>
+                    <li>Device information</li>
+                    <li>Ad interaction data</li>
+                </ul>
+                <p>
+                    For more information about how Google uses data, please review <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
+                </p>
+            </div>
 
-    <h2>6. Veri paylaşımı</h2>
-    <p>Kullanıcı verileri üçüncü şahıslarla satılmaz. Ancak veri aşağıdaki durumlarda paylaşılabilir:</p>
-    <ul>
-      <li>Hukuki zorunluluk halinde yetkili makam talepleri doğrultusunda.</li>
-      <li>Firebase veya benzeri hizmet sağlayıcılarla (servislerin çalışması için gerekli olan teknik paylaşım).</li>
-    </ul>
+            <div class="section">
+                <h2>2. How We Use Your Information</h2>
+                <p>We use the collected information for the following purposes:</p>
+                <ul>
+                    <li><strong>Provide Core Functionality:</strong> To analyze dog images and identify breeds</li>
+                    <li><strong>Improve User Experience:</strong> To understand how users interact with the app and make improvements</li>
+                    <li><strong>Fix Bugs:</strong> To identify and resolve technical issues</li>
+                    <li><strong>Display Ads:</strong> To show relevant advertisements through Google AdMob</li>
+                </ul>
+            </div>
 
-    <h2>7. Verilerin silinmesi ve erişim talepleri</h2>
-    <p>Kullanıcı dilediği zaman yüklemiş olduğu görsellerin silinmesini talep edebilir veya saklanan verileri görmek isteyebilir. Silme veya veri erişim talepleri için lütfen şu e-posta adresiyle iletişime geçin:</p>
-    <p><a href="mailto:a.bayrgorkem@gmail.com">a.bayrgorkem@gmail.com</a></p>
-    <p>Talepler makul bir süre içinde değerlendirilecektir. (Hukuki gereklilikler veya teknik sınırlamalar dolayısıyla bazı verilerin tamamen silinmesi gecikebilir.)</p>
+            <div class="section">
+                <h2>3. Data Storage and Security</h2>
+                <p>
+                    Your privacy and data security are our top priorities:
+                </p>
+                <ul>
+                    <li><strong>Local Processing:</strong> All dog breed identification is performed locally on your device using ONNX Runtime</li>
+                    <li><strong>No Cloud Storage:</strong> We do not upload or store your photos on any server</li>
+                    <li><strong>History Data:</strong> Scan history is stored locally on your device using AsyncStorage and can be deleted at any time</li>
+                    <li><strong>No Personal Information:</strong> We do not collect names, email addresses, phone numbers, or other personal identifiers</li>
+                </ul>
+            </div>
 
-    <h2>8. Çocukların gizliliği</h2>
-    <p>Uygulama 13 yaş altı çocuklara yönelik değildir. 13 yaşın altındaki bir çocuğa ait kişisel veri toplandığından şüpheleniyorsanız lütfen bizimle iletişime geçin; gerekli düzeltmeleri yapacağız.</p>
+            <div class="section">
+                <h2>4. Third-Party Services</h2>
+                <p>
+                    Our app uses the following third-party services:
+                </p>
+                
+                <h3>4.1 Google AdMob</h3>
+                <p>
+                    We use Google AdMob to display advertisements. AdMob may use cookies and similar technologies to provide personalized ads. You can opt out of personalized advertising by adjusting your device settings.
+                </p>
+                <ul>
+                    <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
+                    <li><strong>iOS:</strong> Settings → Privacy → Advertising → Limit Ad Tracking</li>
+                </ul>
 
-    <h2>9. Güvenlik</h2>
-    <p>Verilerin güvenliğini sağlamak için endüstri standartı önlemler uygulanır (şifreleme, yetkilendirme vb.). Ancak hiçbir yöntem %100 güvenli değildir; veri güvenliğini sağlamak için sürekli güncellemeler yapılmaktadır.</p>
+                <h3>4.2 Expo and React Native</h3>
+                <p>
+                    Our app is built using Expo and React Native frameworks, which may collect anonymous crash reports and analytics to improve the platform.
+                </p>
+            </div>
 
-    <h2>10. Politikadaki değişiklikler</h2>
-    <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler olduğunda uygulama içi bildirim veya e-posta ile bilgilendirme yapılacaktır. Lütfen sayfanın en üstündeki "Son güncelleme" tarihini kontrol edin.</p>
+            <div class="section">
+                <h2>5. Children's Privacy</h2>
+                <p>
+                    Our application does not knowingly collect personal information from children under the age of 13. The app is designed for general audiences and does not contain age-restricted content. If you believe we have inadvertently collected information from a child under 13, please contact us immediately.
+                </p>
+            </div>
 
-    <footer>
-      <p>Bu belge bilgilendirme amaçlıdır; hukuki bağlayıcılık adına profesyonel hukuki danışmanlık almanızı öneririz.</p>
-      <p>İletişim: <a href="mailto:a.bayrgorkem@gmail.com">a.bayrgorkem@gmail.com</a></p>
-    </footer>
-  </main>
+            <div class="section">
+                <h2>6. Your Rights and Choices</h2>
+                <p>You have the following rights regarding your data:</p>
+                <ul>
+                    <li><strong>Access:</strong> You can view your scan history within the app</li>
+                    <li><strong>Delete:</strong> You can delete individual scan results or clear all history from the app settings</li>
+                    <li><strong>Opt-Out:</strong> You can disable personalized ads through your device settings</li>
+                    <li><strong>Uninstall:</strong> Uninstalling the app will remove all locally stored data</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>7. Data Retention</h2>
+                <p>
+                    All data is stored locally on your device and is retained until you:
+                </p>
+                <ul>
+                    <li>Manually delete scan results from the history</li>
+                    <li>Clear app data through device settings</li>
+                    <li>Uninstall the application</li>
+                </ul>
+                <p>
+                    We do not retain any data on our servers as all processing is done locally.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>8. Changes to This Privacy Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. We will notify you of any material changes by:
+                </p>
+                <ul>
+                    <li>Updating the "Last Updated" date at the top of this policy</li>
+                    <li>Displaying a notification within the app (for significant changes)</li>
+                </ul>
+                <p>
+                    We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>9. International Users</h2>
+                <p>
+                    Our app is available worldwide. If you are using the app from outside your country of residence, please note that your information may be processed in the country where our services are hosted. By using the app, you consent to the transfer and processing of your information in accordance with this Privacy Policy.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>10. Contact Us</h2>
+                <p>
+                    If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
+                </p>
+                <div class="contact-box">
+                    <p><strong>Email:</strong> <a href="mailto:support@dogbreedscanner.com">support@dogbreedscanner.com</a></p>
+                    <p><strong>App Name:</strong> Dog Breed Scanner</p>
+                    <p><strong>Developer:</strong> Dog Breed Scanner Team</p>
+                </div>
+                <p style="margin-top: 15px;">
+                    We will respond to your inquiry within 30 days of receipt.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>11. Legal Compliance</h2>
+                <p>
+                    This Privacy Policy is designed to comply with:
+                </p>
+                <ul>
+                    <li>General Data Protection Regulation (GDPR) - European Union</li>
+                    <li>California Consumer Privacy Act (CCPA) - United States</li>
+                    <li>Google Play Store Privacy Requirements</li>
+                    <li>Apple App Store Privacy Requirements</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Dog Breed Scanner. All rights reserved.</p>
+            <p>This privacy policy is effective as of December 9, 2025</p>
+        </div>
+    </div>
 </body>
 </html>
